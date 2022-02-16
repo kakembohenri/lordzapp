@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: rgb(179, 231, 225);
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav {
+    background-color: white;
+    margin-bottom: 1.5rem;
+}
+
+.main-nav-items {
+    display: inline-block;
+}
+
+.main-nav-item {
+    display: inline-block;
+    list-style: none;
+    padding: 0.5rem;
+}
+
+.main-nav-item a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.right {
+    text-align: right;
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.left {
+    width: calc(100% - 25rem);
+    padding-left: 0.5rem;
+}
+
+.main-posts {
+    background-color: white;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 1.5rem;
+}
+
+.main-post {
+    padding: 2rem 1rem;
+    font-weight: bold;
+}
+/*
+.main-form {
+    background-color: white;
+    width: 50%;
+    margin: auto;
+    padding: 2rem;
+}
+*/
+form {
+    background-color: white;
+    padding: 2rem;
+    margin: auto;
+    width: 25%;
+    text-align: center;
+}
+
+.main-form-item button {
+    width: 100%;
+    background-color: rgb(64, 64, 224);
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.main-post-form {
+    padding-top: 0.5rem;
+    margin: 0;
+}
+
+.form-textarea {
+    display: inline-block;
+    text-align: left;
+    padding-top: 0.5rem;
+}
+
+textarea {
+    resize: none;
+    width: 25rem;
+    height: 12.5rem;
+    padding: 0.5rem;
+    background-color: #f8f8f8;
+}
+
+.post-btn button {
+    padding: 0.5rem 1rem;
+    background-color: rgb(67, 67, 196);
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.choice {
+    display: inline-block;
+    margin: 0;
+    padding-top: 0;
+}
