@@ -17,10 +17,13 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
         'email',
-        'password',
-        'username',
+        'phone_number',
+        'isVerified',
+        'avatar',
+        'password'
     ];
 
     /**
@@ -42,11 +45,18 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function posts(){
-        return $this->hasMany(Post::class);
-    }        
+    public function landlord()
+    {
+        return $this->hasOne(Landlord::class);
+    }
 
-    public function likes(){
-        return $this->hasMany(Likes::class);
+    public function tenant()
+    {
+        return $this->hasOne(Tenant::class);
+    }
+
+    public function rental()
+    {
+        return $this->hasMany(Rental::class);
     }
 }

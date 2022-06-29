@@ -1,0 +1,355 @@
+.company-logo_dashboard {
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    z-index: 100;
+    transition: 0.8s ease-in-out;
+}
+
+.company-logo_dashboard p {
+    color: white;
+    margin-top: 1rem;
+}
+
+.dashboard-container {
+    /* margin-top: 6rem; */
+    margin-left: 18rem;
+}
+
+.dashboard-welcome {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    margin-bottom: 1rem;
+    box-shadow: 0rem 0rem 0.5rem 0rem rgb(238, 218, 238);
+    padding: 0.5rem 2rem;
+    position: relative;
+}
+
+.dashboard-welcome img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    border: 0.05rem solid purple;
+}
+
+.dashboard-graph {
+    margin-top: 1rem;
+    height: 4rem;
+    width: 50%;
+    margin-left: 15%;
+    text-align: center;
+}
+
+ul.account-options {
+    list-style: none;
+    position: absolute;
+    right: 3%;
+    bottom: -170%;
+    box-shadow: 0rem 0.1rem 0.1rem 0rem rgb(238, 218, 238);
+    display: none;
+}
+
+ul.account-options li {
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: 0.8 ease-in-out;
+}
+
+ul.account-options li:hover {
+    background: linear-gradient(purple, rgb(255, 3, 255));
+    color: white;
+}
+
+ul.account-options li:nth-child(3) {
+    border-bottom: none;
+}
+
+.dashboard-items {
+    margin-top: 13rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0.5rem;
+}
+
+.dashboard-item {
+    display: flex;
+    height: 8rem;
+    width: 15rem;
+    box-shadow: 0rem 0rem 2rem 0rem rgb(255, 156, 255);
+    margin: 1rem 2rem;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.dashboard-item:hover {
+    animation: animate 1s forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: translateY(-10%);
+    }
+}
+
+.dashboard-item_details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2rem;
+}
+
+.dashboard-item_details span {
+    font-size: 1.2rem;
+    font-style: bold;
+}
+
+.dashboard-item_details span:nth-child(2) {
+    margin-top: 0.5rem;
+}
+
+.dashboard-item_icon {
+    height: 5rem;
+    width: 5rem;
+    margin: 0.5rem;
+}
+
+/* Dashboard menu for views apart from main dashboard */
+
+.dashboard-others {
+    padding: 2rem;
+}
+
+input.search {
+    height: 2rem;
+    padding: 0.5rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    border-bottom: 0.05rem solid purple;
+}
+
+button#submit {
+    margin: 1rem 0rem;
+    padding: 0.5rem;
+    border: 0.055rem solid rgb(255, 3, 255);
+    background: transparent;
+    width: 10%;
+    cursor: pointer;
+    position: relative;
+    transition: 1s;
+}
+
+.slide-left {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(purple, rgb(255, 3, 255));
+    height: 100%;
+    width: 0%;
+    transition: 0.5s ease-in-out;
+    z-index: -1;
+}
+
+button#submit:hover {
+    color: white;
+}
+
+button#submit:hover .slide-left {
+    width: 100%;
+}
+
+/* evict tenant */
+
+a#evict {
+    text-decoration: none;
+}
+
+a#evict button#submit {
+    border: 0.05rem solid red;
+}
+
+span.slide-danger {
+    background: red;
+    height: 0;
+    width: 100%;
+}
+
+button#submit:hover .slide-danger {
+    height: 100%;
+}
+
+/* filters */
+
+.filters-container {
+    margin-left: 2rem;
+}
+
+ul.filters {
+    display: flex;
+    padding: 0.5rem 1rem;
+    list-style: none;
+    padding-inline-start: 0rem;
+}
+
+ul.filters li {
+    padding: 0rem 0.5rem;
+}
+
+ul.filters li ul {
+    padding: 0.3rem;
+    list-style: none;
+}
+
+.filter {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 0.05rem solid purple;
+    outline: none;
+    padding: 0.4rem;
+    margin: 0.2rem;
+}
+
+ul.time {
+    display: flex;
+}
+
+ul.time li input {
+    width: 4rem;
+}
+
+ul.money li input {
+    width: 6rem;
+}
+
+/* TABLE */
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+h5#table-date {
+    margin-top: 2rem;
+    width: 90%;
+    box-shadow: 0rem 0rem 0.1rem 0rem rgb(255, 3, 255);
+    padding: 0.5rem;
+}
+
+.table-row {
+    display: table;
+    width: 90%;
+    color: gray;
+    background: transparent;
+    box-shadow: 0rem 0.1rem 0.3rem 0rem rgb(238, 218, 238);
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+}
+
+.table-head {
+    background: linear-gradient(purple, rgb(255, 3, 255));
+    color: white;
+}
+
+.table-head .table-cell {
+    border: none;
+}
+.table-cell {
+    display: table-cell;
+    width: 15%;
+    text-align: center;
+    border-right: 0.1rem solid purple;
+    padding: 0.5rem 0rem;
+}
+
+/* Pay rent */
+
+.backdrop {
+    position: fixed;
+    background: black;
+    opacity: 0.5;
+    height: 0;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    transition: 0.8s ease-in-out;
+    /* display: none; */
+}
+
+.form-container_rent {
+    z-index: 101;
+    /* display: none; */
+    top: -100%;
+    transition: 0.8s ease-in-out;
+    height: 32rem;
+}
+
+.table_action {
+    margin: 0.5rem;
+}
+
+.table_action a {
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    background: rgb(255, 3, 255);
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.table_action a:hover {
+    background: purple;
+}
+
+.table_action button {
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    background: rgb(255, 3, 255);
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.table_action button:hover {
+    background: purple;
+}
+
+.billing-cycle-container {
+    margin: 3rem 0rem;
+}
+
+.billing-table-row {
+    display: table;
+    width: 90%;
+    color: gray;
+    background: transparent;
+    box-shadow: 0rem 0.1rem 0.3rem 0rem rgb(238, 218, 238);
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+}
+
+.billing-head {
+    background: linear-gradient(purple, rgb(255, 3, 255));
+    color: white;
+}
+
+.billing-head .billing-table-cell {
+    border: none;
+}
+
+.billing-table-cell {
+    display: table-cell;
+    width: 15%;
+    text-align: center;
+    border-right: 0.1rem solid purple;
+    padding: 0.5rem 0rem;
+}
